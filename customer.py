@@ -12,7 +12,7 @@ def validate_code(code):
         s = sum(d[i] * (((i + 2) % 9) + 1) for i in range(10)) % 11
         if s == 10:
             s = 0
-    return s == d[10]
+    return s != d[10]
 
 def validate_name(name):
     """R2: name is letters only (Unicode), optional single hyphen/space, 1-50 chars."""
